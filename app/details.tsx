@@ -19,6 +19,14 @@ const Details = () => {
     router.push('/')
   }
 
+  const defense = pokemon?.stats.find(
+    (stat) => stat.stat.name === 'defense',
+  )?.base_stat
+
+  const attack = pokemon?.stats.find(
+    (stat) => stat.stat.name === 'attack',
+  )?.base_stat
+
   return (
     <View className="mt-5">
       <View className="w-full">
@@ -43,8 +51,8 @@ const Details = () => {
           {pokemon && pokemon.species.name}
         </Text>
         <View className="flex-row items-center justify-between gap-10">
-          <Text className="text-xl text-white">Ataque: 40</Text>
-          <Text className="text-xl text-white">Defesa: 40</Text>
+          <Text className="text-xl text-white">Ataque: {attack} </Text>
+          <Text className="text-xl text-white">Defesa: {defense}</Text>
         </View>
       </View>
       <View className="mt-4 w-full">
