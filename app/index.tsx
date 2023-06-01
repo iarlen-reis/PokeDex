@@ -1,6 +1,6 @@
 import { FlatList } from 'react-native'
 import Card from '../src/components/Card'
-import { useGetPokemons } from '../src/hooks/useGetPokemon'
+import { useGetPokemons } from '../src/hooks/useGetPokemons'
 
 const Index = () => {
   const { pokemons } = useGetPokemons()
