@@ -10,6 +10,14 @@ interface Ability {
   slot: number
 }
 
+interface Stat {
+  base_stat: number
+  stat: {
+    name: string
+    url: string
+  }
+}
+
 interface Species {
   name: string
 }
@@ -19,14 +27,6 @@ interface ISprites {
     home: {
       front_default: string
     }
-  }
-}
-
-interface Stat {
-  base_stat: number
-  stat: {
-    name: string
-    url: string
   }
 }
 
