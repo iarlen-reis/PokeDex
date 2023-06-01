@@ -1,37 +1,59 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { api } from '../services/api'
 
-interface IPokemon {
+interface Ability {
+  ability: {
+    name: string
+    url: string
+  }
+  is_hidden: boolean
+  slot: number
+}
+
+interface Species {
   name: string
-  id: number
 }
 
-interface IUseGetPokemons {
-  pokemons: IPokemon[]
-}
-
-export const useGetPokemons = (): IUseGetPokemons => {
-  const [pokemons, setPokemons] = useState<IPokemon[]>([])
-
-  useEffect(() => {
-    const getPokemons = async () => {
-      try {
-        const response = await api.get('/pokemon/?limit=20')
-
-        const data = response.data.results as IPokemon[]
-
-        data.forEach((item, index) => {
-          item.id = index + 1
-        })
-
-        setPokemons(data)
-      } catch (error) {
-        console.log(error)
-      }
+interface ISprites {
+  other: {
+    home: {
+      front_default: string
     }
+  }
+}
 
-    getPokemons()
-  }, []) // Executa apenas na montagem do componente
+interface Stat {
+  base_stat: number
+  stat: {
+    name: string
+    url: string
+  }
+}
 
-  return { pokemons }
+interface IPokemon {
+  sprites: ISprites
+  species: Species
+  abilities: Ability[]
+  stats: Stat[]
+}
+
+interface IUseGetPokemon {
+  pokemon: IPokemon | undefined
+  getAPokemon: (id: string) => Promise<void>
+}
+
+export const useGetPokemon = (): IUseGetPokemon => {
+  const [pokemon, setPokemon] = useState<IPokemon>()
+
+  const getAPokemon = async (id: string) => {
+    try {
+      const response = await api.get<IPokemon>(`/pokemon/${id}`)
+      const data = response.data
+      setPokemon(data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  return { getAPokemon, pokemon }
 }
