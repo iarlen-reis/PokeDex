@@ -10,7 +10,7 @@ const Search = () => {
   const randleSearchPokemon = () => {
     if (!search) return
 
-    router.push({ pathname: 'details', params: { id: search } })
+    router.push({ pathname: 'details', params: { id: search.toLowerCase() } })
 
     setSearch('')
   }
