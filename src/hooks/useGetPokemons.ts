@@ -40,6 +40,7 @@ export const useGetPokemons = (): IUseGetPokemons => {
   }, [])
 
   const loadMorePokemon = async () => {
+    setLoading(true)
     try {
       const response = await api.get(
         `/pokemon?limit=20&offset=${currentPage * 20}`,

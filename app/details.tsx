@@ -16,7 +16,7 @@ const Details = () => {
   const { id } = useLocalSearchParams()
   const router = useRouter()
 
-  const { getAPokemon, pokemon, error, loading } = useGetPokemon()
+  const { getAPokemon, pokemon, loading } = useGetPokemon()
 
   useEffect(() => {
     getAPokemon(String(id))
@@ -44,7 +44,7 @@ const Details = () => {
 
   return (
     <View className="mt-5">
-      {pokemon && (
+      {pokemon ? (
         <>
           <View className="w-full">
             <TouchableOpacity
@@ -87,8 +87,7 @@ const Details = () => {
             </View>
           </View>
         </>
-      )}
-      {error && (
+      ) : (
         <View className="mt-5 items-center justify-center">
           <View className="w-full">
             <TouchableOpacity
