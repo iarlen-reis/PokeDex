@@ -64,7 +64,7 @@ const Details = () => {
             />
           </View>
           <View className="w-full items-center justify-center">
-            <Text className="my-3 text-4xl text-white">
+            <Text className="my-3 text-4xl capitalize text-white">
               {pokemon && pokemon.species.name}
             </Text>
             <View className="flex-row items-center justify-between gap-10">
