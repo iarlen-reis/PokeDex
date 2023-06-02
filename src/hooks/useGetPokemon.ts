@@ -40,10 +40,14 @@ interface IPokemon {
 interface IUseGetPokemon {
   pokemon: IPokemon | undefined
   getAPokemon: (id: string) => Promise<void>
+  error: boolean
+  loading: boolean
 }
 
 export const useGetPokemon = (): IUseGetPokemon => {
   const [pokemon, setPokemon] = useState<IPokemon>()
+  const [error, setError] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(true)
 
   const getAPokemon = async (id: string) => {
     try {
@@ -51,9 +55,11 @@ export const useGetPokemon = (): IUseGetPokemon => {
       const data = response.data
       setPokemon(data)
     } catch (error) {
-      console.error(error)
+      setError(true)
+    } finally {
+      setLoading(false)
     }
   }
 
-  return { getAPokemon, pokemon }
+  return { getAPokemon, pokemon, error, loading }
 }
