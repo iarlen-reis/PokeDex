@@ -18,7 +18,8 @@ const Search = () => {
   return (
     <View className="w-full flex-row items-center justify-between gap-2">
       <TextInput
-        className="roundend h-12 w-[80%] rounded bg-gray-500  px-3 text-lg text-white"
+        placeholder="Digite o nome/ID do pokemon"
+        className="roundend h-12 w-[80%] rounded bg-gray-500  px-3 text-lg text-white placeholder:text-sm placeholder:text-white"
         onChangeText={(text) => setSearch(text)}
         value={search}
       />
