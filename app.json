@@ -4,6 +4,7 @@
     "web": {
       "bundler": "metro"
     },
+    "icon": "./src/assets/icone.png",
     "name": "template-react-native",
     "slug": "template-react-native",
     "packagerOpts": {
@@ -21,7 +22,14 @@
         "wasm",
         "svg"
       ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8acd8ccd-24c2-4d8e-b748-7e2450c8f1c2"
+      }
+    },
+    "android": {
+      "package": "com.pokemon.mobileapp"
     }
   }
-  
 }
