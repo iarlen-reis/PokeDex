@@ -26,25 +26,32 @@
 </p>
 
 ## Gifs das telas
-<div style="display: flex; flex-wrap: wrap; gap: 20px;">
-    <div style="display: flex; flex-direction: column;">
-        <label>Página inical: Rolagem</label>
-        <img src="./src/assets/git/1.gif" alt="GIF 1">
-    </div>
-    <div style="display: flex; flex-direction: column;">
-        <label>Página detalhes: Informações do pokemon</label>
-        <img src="./src/assets/git/2.gif" alt="GIF 2">
-    </div>
-    <div style="display: flex; flex-direction: column;">
-        <label>Pokemon não encontrado (Pesquisa)</label>
-        <img src="./src/assets/git/3.gif" alt="GIF 3">
-    </div>
-    <div style="display: flex; flex-direction: column;">
-        <label>Pokemon encontrado (Pesquisa)</label>
-        <img src="./src/assets/git/4.gif" alt="GIF 4">
-    </div>
-</div>
-
+<table>
+  <tr>
+    <td align="center">
+      <label>Página inical: Rolagem</label>
+      <br>
+      <img src="./src/assets/git/1.gif" alt="GIF 1">
+    </td>
+    <td align="center">
+      <label>Página detalhes: Informações do pokemon</label>
+      <br>
+      <img src="./src/assets/git/2.gif" alt="GIF 2">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <label>Pokemon não encontrado (Pesquisa)</label>
+      <br>
+      <img src="./src/assets/git/3.gif" alt="GIF 3">
+    </td>
+    <td align="center">
+      <label>Pokemon encontrado (Pesquisa)</label>
+      <br>
+      <img src="./src/assets/git/4.gif" alt="GIF 4">
+    </td>
+  </tr>
+</table>
 
 ## Tecnologias utilizadas:
 - [Expo](https://docs.expo.dev/)
