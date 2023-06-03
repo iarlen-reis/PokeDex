@@ -26,24 +26,25 @@
 </p>
 
 ## Gifs das telas
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-    <div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    <div style="display: flex; flex-direction: column;">
         <label>Página inical: Rolagem</label>
         <img src="./src/assets/git/1.gif" alt="GIF 1">
     </div>
-    <div>
-      <label>Página detalhes: Informações do pokemon</label>
+    <div style="display: flex; flex-direction: column;">
+        <label>Página detalhes: Informações do pokemon</label>
         <img src="./src/assets/git/2.gif" alt="GIF 2">
     </div>
-    <div>
+    <div style="display: flex; flex-direction: column;">
         <label>Pokemon não encontrado (Pesquisa)</label>
         <img src="./src/assets/git/3.gif" alt="GIF 3">
     </div>
-    <div>
-    <label>Pokemon encontrado (Pesquisa)</label>
+    <div style="display: flex; flex-direction: column;">
+        <label>Pokemon encontrado (Pesquisa)</label>
         <img src="./src/assets/git/4.gif" alt="GIF 4">
     </div>
 </div>
+
 
 ## Tecnologias utilizadas:
 - [Expo](https://docs.expo.dev/)
