@@ -9,19 +9,19 @@
 
 ## O que é o projeto?
 <p>
- Esse foi meu primeiro projeto mobile, seu intuito foi aprender sobre o react native e suas funcionalidades, foi
- utilizado coisas basicas como, criação de componentes, hooks, criação de hooks constumizados, propriedades, manuseio de
+Esse foi meu primeiro projeto mobile, seu intuito foi aprender sobre o react native e suas funcionalidades, foi
+ utilizado coisas básicas como, criação de componentes, hooks, criação de hooks customizados, propriedades, manuseio de
  estados e requisições https com Axios.
 </p>
 <p>
   A aplicação utiliza a API do pokeAPI para encontrar informações sobre pokemons, na tela inicial, são exibidos inicialmente
-  20 pokemons, ao scrollar a tela até o fim, são carregados mais 20 pokemon e assim por diante. As informações da tela inicial
+  20 pokemons, ao rolar a tela até o fim, são carregados mais 20 pokemon e assim por diante. As informações da tela inicial
   são exibidas a partir de um componente de Card e mapeadas utilizando FlatList. 
 </p>
 <p>
-  Na página individual, que é exibida ao clicar no botão com icone de lupa (Pagina inicial), o usuário é exibido para a
+  Na página individual, exibida ao clicar no botão com ícone de lupa (Pagina inicial), o usuário é exibido para a
   página de detalhes do pokemon escolhido, onde é exibido mais informações sobre ele. A aplicação também possui um
-  componente de Search, que é composto por um inputText e um botão, onde é possível encontrar pokemon a partir do seu
+  componente de Search, composto por um inputText e um botão, onde é possível encontrar pokemon a partir do seu
   nome ou ID.
 </p>
 
